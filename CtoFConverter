@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class CtoFConverter
+{
+    public static void main(String[] args)
+    {
+        double ferin = 0.0;
+        double cels = 0.0;
+        boolean done = false;
+        Scanner in = new Scanner(System.in);
+
+        do
+        {
+            System.out.print(" What is your temp in celcuis?: ");
+            if(in.hasNextDouble())
+            {
+                cels = in.nextDouble();
+                ferin = cels * 9 / 5 + 32;
+                System.out.print(" Your temp in Ferinhieght is " + ferin);
+                done = true;
+            }
+            else
+            {
+                System.out.print("Try agin and input the right value");
+                in.nextLine();
+
+            }
+        }while(!done);
+    }
+}
